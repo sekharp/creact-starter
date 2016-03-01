@@ -1,7 +1,7 @@
 var NewSkill = React.createClass({
   handleClick() {
-    var name    = this.refs.name.value;
-    var details = this.refs.details.value;
+    var name    = this.refs.name.getDOMNode().value;
+    var details = this.refs.details.getDOMNode().value;
 
     $.ajax({
       url: '/api/v1/skills',
@@ -16,7 +16,8 @@ var NewSkill = React.createClass({
   render() {
     return (
       <div>
-        <input ref='name' placeholder='Enter name of skill' />
+      <h2>Enter A New Skill</h2>
+        <input ref='name' placeholder='Enter Name of Skill' />
         <input ref='details' placeholder='Details' />
         <button onClick={this.handleClick}>Submit</button>
       </div>
