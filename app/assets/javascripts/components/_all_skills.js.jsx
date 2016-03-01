@@ -1,7 +1,7 @@
 var AllSkills = React.createClass({
 
   getInitialState() {
-    return { skills: [] }
+    return { skills: [] };
   },
 
   componentDidMount() {
